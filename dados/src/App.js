@@ -1,22 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { Dado } from './components/Dado';
+
 
 function App() {
+  const [ativo, setAtivo] = useState(true);
+
+  const toggleAtivo = () => {
+    setAtivo(!ativo);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Jogue seu dado!</h1>
+        <div style={{display : 'flex', justifyContent : 'space-between', gap : '50px'}}>
+        <Dado condicao={!ativo} toggleAtivo={toggleAtivo}/>
+        <hr/>
+        <Dado condicao={ativo} toggleAtivo={toggleAtivo}/>
+        </div>
       </header>
     </div>
   );
