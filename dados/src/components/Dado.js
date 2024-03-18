@@ -23,7 +23,7 @@ export function Dado({condicao, toggleAtivo}) {
   return (
     <>
     <div style={{justifyContent : 'center'}}>
-      <img src={dados[dado]} alt={`Dado ${dado}`} />
+      <img src={dados[dado-1]} alt={`Dado ${dado}`} />
       <h2>Seu número foi : {dado}</h2>
       <button onClick={jogarDado} disabled={condicao} style={{borderRadius :'10px', border: 'none', padding: '20px', fontSize:'20px', color:'Purple'}}>Jogar dado</button>
       </div> 
