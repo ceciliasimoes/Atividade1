@@ -81,5 +81,3 @@ Sinta-se à vontade para contribuir com este projeto! Basta seguir estas etapas:
 Este projeto é licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para obter mais detalhes.
 
 ```
-
-Este README.md inclui informações sobre como usar o aplicativo, as tecnologias utilizadas, a estrutura do projeto, como contribuir e a licença do projeto. Certifique-se de personalizar as seções com informações relevantes para o seu projeto.
