@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 const dados = [
   "https://cdn.glitch.global/d06ef131-6a92-4c03-9b83-0c7f07ea77eb/dado1.png?v=1709855087643",
   "https://cdn.glitch.global/d06ef131-6a92-4c03-9b83-0c7f07ea77eb/dado2.png?v=1709855088164",
@@ -9,13 +10,14 @@ const dados = [
 ];
 
 
-export function Dado({condicao, toggleAtivo}) {
+export function Dado({condicao, toggleDesativo, setNumber}) {
   const [dado, setDado] = useState(Math.floor(Math.random() * 6) + 1);
 
   const jogarDado = () => {
     const numero = Math.floor(Math.random() * 6) + 1;
     setDado(numero);
-    toggleAtivo();
+    toggleDesativo();
+    setNumber(numero);
   }
   
  
@@ -25,7 +27,7 @@ export function Dado({condicao, toggleAtivo}) {
     <div style={{justifyContent : 'center'}}>
       <img src={dados[dado-1]} alt={`Dado ${dado}`} />
       <h2>Seu número foi : {dado}</h2>
-      <button onClick={jogarDado} disabled={condicao} style={{borderRadius :'10px', border: 'none', padding: '20px', fontSize:'20px', color:'Purple'}}>Jogar dado</button>
+      <button onClick={jogarDado} disabled={!condicao} style={{borderRadius :'10px', border: 'none', padding: '20px', fontSize:'20px', color:'Purple'}}>Jogar dado</button>
       </div> 
     </>
   );
